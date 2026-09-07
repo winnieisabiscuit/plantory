@@ -1117,3 +1117,114 @@ body {
     margin-top: 0.4rem;
   }
 }
+
+/* Plantory daylight palette */
+:root {
+  color-scheme: light;
+  --ink: #e4f0ec;
+  --surface: rgba(250, 253, 252, 0.8);
+  --surface-strong: rgba(244, 250, 248, 0.96);
+  --line: rgba(31, 82, 70, 0.2);
+  --line-strong: rgba(31, 82, 70, 0.36);
+  --text: #173b35;
+  --muted: #58726d;
+  --green: #3f855d;
+  --mint: #2f8d7a;
+  --blue: #3e7ca8;
+}
+
+body {
+  background:
+    radial-gradient(circle at 18% 24%, rgba(92, 181, 151, 0.3), transparent 34rem),
+    radial-gradient(circle at 78% 80%, rgba(89, 152, 185, 0.23), transparent 31rem),
+    linear-gradient(145deg, #eef7f3 0%, #dcece7 50%, #d4e6e3 100%);
+}
+
+.ambient-one {
+  background: #69bfa5;
+  opacity: 0.26;
+}
+
+.ambient-two {
+  background: #6ea8bc;
+  opacity: 0.22;
+}
+
+.globe-copy h1 {
+  text-shadow: 0 8px 34px rgba(34, 77, 67, 0.12);
+}
+
+.icon-button,
+.country-pill,
+.species-button {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.icon-button:hover,
+.icon-button:focus-visible {
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.country-pill:hover,
+.country-pill:focus-visible,
+.country-pill.active {
+  border-color: rgba(63, 133, 93, 0.48);
+  background: rgba(63, 133, 93, 0.13);
+}
+
+.globe-shadow {
+  background: rgba(24, 65, 57, 0.22);
+}
+
+.globe-loading,
+.query-chip,
+.coordinate-chip {
+  background: rgba(247, 252, 250, 0.86);
+  box-shadow: 0 14px 34px rgba(33, 78, 68, 0.12);
+}
+
+.plant-panel {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.82), transparent 48%),
+    rgba(242, 249, 246, 0.78);
+  box-shadow: 0 24px 70px rgba(35, 76, 67, 0.15);
+}
+
+.country-select-wrap select {
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.botanical-card {
+  background:
+    radial-gradient(circle at 75% 22%, color-mix(in srgb, var(--accent) 28%, transparent), transparent 34%),
+    linear-gradient(135deg, #2e665b, #17434a 66%, #12373c);
+}
+
+.botanical-text h3 {
+  color: #f7fbf9;
+}
+
+.species-button.active small {
+  color: #3f625b;
+}
+
+.species-skeleton {
+  background: linear-gradient(90deg, rgba(31, 82, 70, 0.035), rgba(31, 82, 70, 0.1), rgba(31, 82, 70, 0.035));
+}
+
+.panel-foot div {
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.data-note {
+  color: #58736d;
+}
+
+.data-note a {
+  color: #246a5c;
+}
+
+.toast {
+  background: rgba(245, 251, 248, 0.96);
+  box-shadow: 0 18px 50px rgba(35, 76, 67, 0.17);
+}
