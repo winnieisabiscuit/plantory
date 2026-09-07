@@ -752,13 +752,13 @@ canvas {
 
 /* Plant Atlas 2.0 — brighter earth and live coordinate results */
 :root {
-  --ink: #071a22;
-  --surface: rgba(8, 32, 39, 0.78);
-  --surface-strong: rgba(7, 27, 33, 0.96);
-  --line: rgba(190, 229, 225, 0.18);
-  --line-strong: rgba(190, 229, 225, 0.34);
+  --ink: #0b242b;
+  --surface: rgba(15, 45, 51, 0.78);
+  --surface-strong: rgba(12, 39, 46, 0.96);
+  --line: rgba(205, 239, 230, 0.22);
+  --line-strong: rgba(205, 239, 230, 0.38);
   --text: #f2f8f4;
-  --muted: #a9c0bd;
+  --muted: #b8cbc6;
   --green: #c8f78c;
   --mint: #68dfc4;
   --blue: #77c7ff;
@@ -766,19 +766,19 @@ canvas {
 
 body {
   background:
-    radial-gradient(circle at 18% 26%, rgba(26, 119, 128, 0.2), transparent 34rem),
-    radial-gradient(circle at 77% 78%, rgba(55, 113, 91, 0.18), transparent 30rem),
-    linear-gradient(145deg, #06151c 0%, #09242b 50%, #07191e 100%);
+    radial-gradient(circle at 18% 26%, rgba(35, 139, 136, 0.25), transparent 34rem),
+    radial-gradient(circle at 77% 78%, rgba(75, 152, 120, 0.22), transparent 30rem),
+    linear-gradient(145deg, #0a2229 0%, #11333a 50%, #0c2830 100%);
 }
 
 .ambient-one {
-  background: #218486;
-  opacity: 0.28;
+  background: #2b9b95;
+  opacity: 0.32;
 }
 
 .ambient-two {
-  background: #3b8167;
-  opacity: 0.24;
+  background: #4d9b78;
+  opacity: 0.28;
 }
 
 .globe-copy h1 {
@@ -837,7 +837,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--text);
-  background: rgba(5, 21, 27, 0.82);
+  background: rgba(11, 36, 42, 0.84);
   backdrop-filter: blur(14px);
   font-size: 0.82rem;
   transition: opacity 300ms ease, visibility 300ms ease;
@@ -871,7 +871,7 @@ body {
   padding: 0.65rem 0.8rem;
   border: 1px solid var(--line);
   border-radius: 0.9rem;
-  background: rgba(7, 27, 33, 0.7);
+  background: rgba(12, 40, 46, 0.76);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(16px);
   pointer-events: none;
@@ -912,7 +912,7 @@ body {
 .coordinate-chip {
   right: 2%;
   bottom: 8%;
-  background: rgba(7, 27, 33, 0.76);
+  background: rgba(12, 40, 46, 0.8);
 }
 
 .drag-hint {
@@ -922,15 +922,20 @@ body {
 
 .plant-panel {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.075), transparent 34%),
-    rgba(8, 32, 39, 0.78);
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent 36%),
+    rgba(15, 45, 51, 0.8);
+  box-shadow: 0 24px 80px rgba(2, 14, 17, 0.2);
+}
+
+.country-select-wrap select {
+  background: #123740;
 }
 
 .botanical-card {
   min-height: 272px;
   background:
     radial-gradient(circle at 75% 22%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 34%),
-    linear-gradient(135deg, #1b4e48, #0a2c35 66%, #082329);
+    linear-gradient(135deg, #245d54, #123b44 66%, #0e3137);
 }
 
 .botanical-card::before {
@@ -1034,7 +1039,7 @@ body {
 .species-skeleton {
   height: 3rem;
   border-radius: 0.75rem;
-  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.09), rgba(255,255,255,0.03));
+  background: linear-gradient(90deg, rgba(255,255,255,0.045), rgba(255,255,255,0.12), rgba(255,255,255,0.045));
   background-size: 200% 100%;
   animation: shimmer 1.25s infinite linear;
 }
@@ -1051,7 +1056,7 @@ body {
   margin: 0.9rem 0 0;
   padding-left: 0.75rem;
   border-left: 2px solid rgba(104, 223, 196, 0.4);
-  color: #77928d;
+  color: #91aaa5;
   font-size: 0.72rem;
   line-height: 1.6;
 }
