@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#061412" />
+    <meta
+      name="description"
+      content="Spin the globe and explore local plants, botanical histories, and changing distributions around the world."
+    />
+    <title>PLANTORY · Global Plant Atlas</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Plantory home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>PLANTORY</span>
+        </a>
+        <div class="topbar-meta">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="archiveCount">Global plant observations</span>
+          <button class="icon-button" id="rotationToggle" type="button" aria-pressed="false">
+            <span class="pause-icon" aria-hidden="true">Ⅱ</span>
+            <span class="button-label">Pause rotation</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="explorer" aria-label="Global plant explorer">
+        <div class="globe-stage">
+          <div class="eyebrow"><span>01</span> Explore the Earth</div>
+          <div class="globe-copy">
+            <h1>PLANTORY</h1>
+            <p>Explore the plants, places, and histories of our world.</p>
+          </div>
+
+          <div class="canvas-wrap" id="canvasWrap">
+            <div id="globe3d" role="application" aria-label="Interactive globe: drag, zoom, and click to explore"></div>
+            <div class="globe-shadow" aria-hidden="true"></div>
+            <div class="globe-loading" id="globeLoading">
+              <span></span>
+              Loading the Earth
+            </div>
+            <div class="coordinate-chip" id="coordinateChip">31.2°N · 121.5°E</div>
+            <div class="query-chip" id="queryStatus">
+              <span></span>
+              <strong>Near Shanghai</strong>
+              <small>Plant records within 50 km</small>
+            </div>
+            <div class="drag-hint" aria-hidden="true">
+              <span>↔</span>
+              Drag · Zoom · Click
+            </div>
+          </div>
+
+          <div class="featured-strip" aria-label="Featured country shortcuts">
+            <span>Quick travel</span>
+            <div class="country-pills" id="countryPills"></div>
+          </div>
+        </div>
+
+        <aside class="plant-panel" aria-live="polite">
+          <div class="panel-head">
+            <div>
+              <span class="panel-kicker" id="regionType">Plants near these coordinates</span>
+              <h2 id="countryName">China · Near Shanghai</h2>
+            </div>
+            <label class="country-select-wrap">
+              <span class="sr-only">Select a country</span>
+              <select id="countrySelect" aria-label="Select a country"></select>
+              <span aria-hidden="true">⌄</span>
+            </label>
+          </div>
+
+          <div class="botanical-card" id="botanicalCard">
+            <img class="plant-photo" id="plantPhoto" alt="" />
+            <div class="botanical-art" id="botanicalArt" aria-hidden="true">
+              <span class="leaf leaf-a"></span>
+              <span class="leaf leaf-b"></span>
+              <span class="leaf leaf-c"></span>
+              <span class="leaf-stem"></span>
+            </div>
+            <span class="photo-credit" id="photoCredit"></span>
+            <div class="botanical-index" id="botanicalIndex">NO. 01</div>
+            <div class="botanical-text">
+              <span class="role" id="plantRole">Ancient survivor</span>
+              <h3 id="plantName">Ginkgo</h3>
+              <p class="latin" id="latinName">Ginkgo biloba</p>
+            </div>
+          </div>
+
+          <div class="species-row" id="speciesRow" aria-label="Plants commonly observed near this location"></div>
+
+          <div class="detail-grid">
+            <article>
+              <span class="detail-number">01</span>
+              <div>
+                <h4 id="detailTitle">Plant profile</h4>
+                <p id="plantDetail"></p>
+              </div>
+            </article>
+            <article>
+              <span class="detail-number">02</span>
+              <div>
+                <h4 id="historyTitle">A short history</h4>
+                <p id="plantHistory"></p>
+              </div>
+            </article>
+            <article class="change-card">
+              <span class="detail-number">03</span>
+              <div>
+                <h4 id="changeTitle">Range and change</h4>
+                <p id="plantChange"></p>
+              </div>
+            </article>
+          </div>
+
+          <div class="panel-foot">
+            <div>
+              <span id="rangeLabel">Native range</span>
+              <strong id="nativeRange">Central China</strong>
+            </div>
+            <div>
+              <span id="scaleLabel">Time scale</span>
+              <strong id="timeScale">About 270 million years</strong>
+            </div>
+          </div>
+
+          <p class="data-note" id="dataNote">
+            Local plant results use iNaturalist community observations; observation frequency does not equal population size.
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="./vendor/globe.gl.min.js"></script>
+    <script src="./vendor/topojson-client.min.js"></script>
+    <script>window.USE_GLOBE_V2 = true;</script>
+    <script src="./data-en.js"></script>
+    <script src="./app-v2.js"></script>
+  </body>
+</html>
